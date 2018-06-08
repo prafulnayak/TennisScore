@@ -9,4 +9,9 @@
     <string name="start">Start</string>
     <string name="tea_break">Break</string>
     <string name="court_name">Court No 1</string>
+    <string name="dialog_heading">Enter Players Name</string>
+    <string name="player1">Player1</string>
+    <string name="player2">Player2</string>
+    <string name="set_details">Set Details</string>
+
 </resources>
