@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tennis Score</string>
+    <string name="previous_set">Previous Sets</string>
+    <string name="players">Players</string>
+    <string name="set">Set</string>
+    <string name="game">Game</string>
+    <string name="points">Point</string>
+    <string name="plus">+</string>
+    <string name="start">Start</string>
+    <string name="tea_break">Break</string>
+    <string name="court_name">Court No 1</string>
+</resources>

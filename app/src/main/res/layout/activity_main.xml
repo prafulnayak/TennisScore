@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cardCornerRadius="6dp"
+            android:elevation="8dp"
+            android:backgroundTint="@color/colorSubBackground">
+            <TextView
+                android:id="@+id/courtName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/court_name"
+                android:textColor="@color/colorText"
+                android:fontFamily="@font/google_sans_bold"
+                android:textSize="25dp"
+                android:gravity="center"/>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <!-- This Linear Layout is for Score table-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="6dp"
+            android:elevation="8dp"
+            android:backgroundTint="@color/colorSubBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <!--Previous Set -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="@string/previous_set"
+                        style="@style/scoreBoardHeadingStyle"/>
+                    <!-- Player 1 sets-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="1dp">
+                        <TextView
+                            android:id="@+id/player1_set1"
+                            style="@style/setsTextViewStyle"/>
+                        <TextView
+                            android:id="@+id/player1_set2"
+                            style="@style/setsTextViewStyle"/>
+                        <TextView
+                            android:id="@+id/player1_set3"
+                            style="@style/setsTextViewStyle"/>
+                    </LinearLayout>
+                    <!-- Player 1 sets-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="1dp">
+                        <TextView
+                            android:id="@+id/player2_set1"
+                            style="@style/setsTextViewStyle"/>
+                        <TextView
+                            android:id="@+id/player2_set2"
+                            style="@style/setsTextViewStyle"/>
+                        <TextView
+                            android:id="@+id/player2_set3"
+                            style="@style/setsTextViewStyle"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--Players name -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="@string/players"
+                        style="@style/scoreBoardHeadingStyle"/>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="6dp"
+                        android:elevation="8dp"
+                        android:backgroundTint="@color/colorText">
+                        <TextView
+                            android:id="@+id/player1_name"
+                            style="@style/playersNameStyle"/>
+
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="6dp"
+                        android:elevation="8dp"
+                        android:backgroundTint="@color/colorText">
+                        <TextView
+                            android:id="@+id/player2_name"
+                            style="@style/playersNameStyle"/>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+                <!--Sets, Game and Points -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+                    <!-- Sets -->
+                    <LinearLayout
+                        style="@style/setsGamesAndPointsLayoutStyle">
+                        <TextView
+                            android:text="@string/set"
+                            style="@style/scoreBoardHeadingStyle"/>
+                        <TextView
+                            android:id="@+id/player1_set"
+                            style="@style/setsGamesPointsTextViewStyle" />
+                        <TextView
+                            android:id="@+id/player2_set"
+                            style="@style/setsGamesPointsTextViewStyle" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/setsGamesAndPointsLayoutStyle">
+                        <TextView
+                            android:text="@string/game"
+                            style="@style/scoreBoardHeadingStyle"/>
+                        <TextView
+                            android:id="@+id/player1_game"
+                            style="@style/setsGamesPointsTextViewStyle" />
+                        <TextView
+                            android:id="@+id/player2_game"
+                            style="@style/setsGamesPointsTextViewStyle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/setsGamesAndPointsLayoutStyle">
+                        <TextView
+                            android:text="@string/points"
+                            style="@style/scoreBoardHeadingStyle"/>
+                        <TextView
+                            android:id="@+id/player1_point"
+                            style="@style/setsGamesPointsTextViewStyle" />
+                        <TextView
+                            android:id="@+id/player2_point"
+                            style="@style/setsGamesPointsTextViewStyle" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <!-- This Linear Layout is for Court-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cardCornerRadius="6dp"
+            android:elevation="8dp"
+            android:backgroundTint="@color/colorCourt">
+            <!-- Linear layout for court for double player-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="45dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/colorCourt">
+                <!-- Single players outside -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/border_text"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/border_text"/>
+                </LinearLayout>
+                <!-- Linear layout for court for Single player-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:background="@drawable/border_text">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                    <!-- Service box for Player 1-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/player1_service__box1"
+                            android:background="@drawable/border_text"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/player1_service__box2"
+                            android:background="@drawable/border_text"/>
+
+                    </LinearLayout>
+                    <!-- Service box for Player 1-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/player2_service__box1"
+                            android:background="@drawable/border_text"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/player2_service__box2"
+                            android:background="@drawable/border_text"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- Single players outside -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/border_text"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/border_text"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <!-- This Linear Layout is for input to the score board -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="6dp"
+            android:elevation="8dp"
+            android:backgroundTint="@color/colorSubBackground">
+            <!-- Score-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/player1ButtonScorePlus"
+                    style="@style/scoreButtonPlusStyle"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center">
+                        <Button
+                            android:id="@+id/match_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start"
+                            style="@style/startBreakButtonStyle"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center">
+                        <Button
+                            android:id="@+id/teabreak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tea_break"
+                            style="@style/startBreakButtonStyle"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/player2ButtonScorePlus"
+                    style="@style/scoreButtonPlusStyle"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>
