@@ -13,7 +13,8 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_margin">3dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColor">@color/colorBackground</item>
+        <item name="android:fontFamily">@font/google_sans_bold</item>
         <item name="android:background">@drawable/round_border_text</item>
 
     </style>
@@ -48,7 +49,8 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_margin">3dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColor">@color/colorBackground</item>
+        <item name="android:fontFamily">@font/google_sans_bold</item>
         <item name="android:background">@drawable/round_border_text</item>
 
     </style>

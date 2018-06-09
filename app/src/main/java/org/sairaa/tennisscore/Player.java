@@ -2,9 +2,10 @@ package org.sairaa.tennisscore;
 
 public class Player {
     private String name;
-    private int point, game, set, set1, set2, set3;
-    Player(){
-
+    private int point, game, set, set1, set2, set3 = 0;
+    Player(String name, int i){
+        this.name = name;
+        this.point = i;
     }
 
     public void setName(String name) {
