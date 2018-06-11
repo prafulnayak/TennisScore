@@ -55,13 +55,12 @@
 
     </style>
     <style name="scoreButtonPlusStyle">
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_margin">10dp</item>
         <item name="android:text">@string/plus</item>
-        <item name="android:textColor">@color/colorBackground</item>
         <item name="android:background">@drawable/round_button</item>
+        <item name="android:textColor">@color/colorBackground</item>
         <item name="android:textSize">30dp</item>
     </style>
     <style name="startBreakButtonStyle">
@@ -71,4 +70,5 @@
         <item name="android:textSize">15dp</item>
         <item name="android:fontFamily">@font/google_sans_bold</item>
     </style>
+
 </resources>

@@ -63,4 +63,13 @@ public class Player {
     public int getSet3() {
         return set3;
     }
+
+    public void reset() {
+        this.point = 0;
+        this.game = 0;
+        this.set = 0;
+        this.set1 = 0;
+        this.set2 = 0;
+        this.set3 = 0;
+    }
 }

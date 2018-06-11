@@ -6,29 +6,25 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/title_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:fontFamily="@font/google_sans_bold"
         android:gravity="center"
-        android:text="@string/dialog_heading"
+        android:text="@string/result"
         android:textColor="@color/colorText"
         android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/editText_player1"
+    <TextView
+        android:id="@+id/message_alert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="@string/player1"
-        android:textColor="@color/colorPrimary" />
+        android:fontFamily="@font/google_sans"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp" />
 
-    <EditText
-        android:id="@+id/editText_player2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="@string/player2"
-        android:textColor="@color/colorPrimary" />
 
 </LinearLayout>

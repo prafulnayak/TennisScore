@@ -7,11 +7,23 @@
     <string name="points">Point</string>
     <string name="plus">+</string>
     <string name="start">Start</string>
-    <string name="tea_break">Break</string>
+    <string name="tea_break">Reset</string>
     <string name="court_name">Court No 1</string>
     <string name="dialog_heading">Enter Players Name</string>
     <string name="player1">Player1</string>
     <string name="player2">Player2</string>
     <string name="set_details">Set Details</string>
+    <string name="advantage">Advantage</string>
+    <string name="deuce_again">Deuce Again</string>
+    <string name="deuce">Deuce</string>
+    <string name="set_score">Set Score</string>
+    <string name="alert_msg_part"> scored +1 Game and has Set Score : </string>
+    <string name="result">Result</string>
+    <string name="match_score">Match Score</string>
+    <string name="alert_msg_part2">scored +1 Set and has Match Score : </string>
+    <string name="winner">Winner</string>
+    <string name="won_match">Congratulation !!!</string>
+    <string name="tie_break">Tie Break</string>
+    <string name="tie_msg">Now 7 points to be played. Have to maintain 2 points difference to win the set.</string>
 
 </resources>
