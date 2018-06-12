@@ -31,7 +31,7 @@
                 android:gravity="center"
                 android:text="@string/court_name"
                 android:textColor="@color/colorText"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
     <!-- This Linear Layout is for Score table-->
@@ -398,6 +398,9 @@
                     <Button
                         android:id="@+id/player1ButtonScorePlus"
                         style="@style/scoreButtonPlusStyle" />
+                    <Button
+                        android:id="@+id/player1DoubleFault"
+                        style="@style/doubleFaultStyle" />
 
                 </LinearLayout>
 
@@ -452,6 +455,9 @@
                     <Button
                         android:id="@+id/player2ButtonScorePlus"
                         style="@style/scoreButtonPlusStyle" />
+                    <Button
+                        android:id="@+id/player2DoubleFault"
+                        style="@style/doubleFaultStyle" />
 
                 </LinearLayout>
             </LinearLayout>

@@ -25,5 +25,12 @@
     <string name="won_match">Congratulation !!!</string>
     <string name="tie_break">Tie Break</string>
     <string name="tie_msg">Now 7 points to be played. Have to maintain 2 points difference to win the set.</string>
+    <string name="zero">00</string>
+    <string name="fifteen">15</string>
+    <string name="thirty">30</string>
+    <string name="fourty">40</string>
+    <string name="adv">Ad</string>
+    <string name="error">EE</string>
+    <string name="ok">OK</string>
 
 </resources>

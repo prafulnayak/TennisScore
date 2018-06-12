@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView p1point,p1game,p1set,p1set1,p1set2,p1set3;
     private TextView p2point,p2game,p2set,p2set1,p2set2,p2set3;
     private TextView player1Text, player2Text;
-    private Button p1plusButton,p2plusButton,matchstart,teaBreak, player1Ball, player2Ball;
+    private Button p1plusButton,p2plusButton,matchstart,teaBreak, player1Ball, player2Ball,player1DF,player2DF;
     private Player player1, player2;
     private final float TOTAL_SET = 3;
     boolean mTopLeft = true;
@@ -35,6 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         player1Name = findViewById(R.id.player1_name1);
         player2Name = findViewById(R.id.player2_name2);
+
+        player1DF = findViewById(R.id.player1DoubleFault);
+        player1DF.setOnClickListener(this);
+        player2DF = findViewById(R.id.player2DoubleFault);
+        player2DF.setOnClickListener(this);
 
         p1point = findViewById(R.id.player1_point);
         p1game = findViewById(R.id.player1_game);
@@ -67,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         p1plusButton.setVisibility(View.INVISIBLE);
         p2plusButton.setVisibility(View.INVISIBLE);
+        player1DF.setVisibility(View.INVISIBLE);
+        player2DF.setVisibility(View.INVISIBLE);
         teaBreak.setVisibility(View.INVISIBLE);
 
         // get prompt.xml view
@@ -140,6 +147,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.player2ButtonScorePlus:
                 setPointsToScoreBoard(0,1);
                 break;
+            case R.id.player1DoubleFault:
+                setPointsToScoreBoard(0,1);
+                break;
+            case R.id.player2DoubleFault:
+                setPointsToScoreBoard(1,0);
+                break;
             case R.id.match_start:
                 //Start Match Button
                 // active all other button
@@ -148,7 +161,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 matchstart.setVisibility(View.INVISIBLE);
                 p1plusButton.setVisibility(Button.VISIBLE);
                 p2plusButton.setVisibility(Button.VISIBLE);
-                teaBreak.setVisibility(View.INVISIBLE);
+                player1DF.setVisibility(View.VISIBLE);
+                player2DF.setVisibility(View.VISIBLE);
+                teaBreak.setVisibility(View.VISIBLE);
                 break;
             case R.id.teabreak:
                 //Reset Button
@@ -157,6 +172,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 player2.reset();
                 setTextViewEmplt();
                 matchstart.setVisibility(View.VISIBLE);
+                p1plusButton.setVisibility(Button.INVISIBLE);
+                p2plusButton.setVisibility(Button.INVISIBLE);
+                player1DF.setVisibility(View.INVISIBLE);
+                player2DF.setVisibility(View.INVISIBLE);
                 teaBreak.setVisibility(View.INVISIBLE);
                 break;
 
@@ -319,7 +338,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final TextView msg = promptsView
                 .findViewById(R.id.message_alert);
         msg.setText(msgT);
-        alertBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        alertBuilder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -416,12 +435,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //player 1 won the match
             p1plusButton.setVisibility(Button.INVISIBLE);
             p2plusButton.setVisibility(Button.INVISIBLE);
+            player1DF.setVisibility(View.INVISIBLE);
+            player2DF.setVisibility(View.INVISIBLE);
             teaBreak.setVisibility(View.VISIBLE);
             setDialogMessage(getString(R.string.winner),getString(R.string.won_match)+"\n"+player1.getName());
         }else if(player2.getSet() > TOTAL_SET/2){
             //player 2 winner
             p1plusButton.setVisibility(Button.INVISIBLE);
             p2plusButton.setVisibility(Button.INVISIBLE);
+            player1DF.setVisibility(View.INVISIBLE);
+            player2DF.setVisibility(View.INVISIBLE);
             teaBreak.setVisibility(View.VISIBLE);
             setDialogMessage(getString(R.string.winner),getString(R.string.won_match)+"\n"+player2.getName());
         }
@@ -439,42 +462,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             switch (p1){
                 case 0:
-                    p1point.setText("00");
+                    p1point.setText(getString(R.string.zero));
                     break;
                 case 1:
-                    p1point.setText("15");
+                    p1point.setText(getString(R.string.fifteen));
                     break;
                 case 2:
-                    p1point.setText("30");
+                    p1point.setText(getString(R.string.thirty));
                     break;
                 case 3:
-                    p1point.setText("40");
+                    p1point.setText(getString(R.string.fourty));
                     break;
                 case 4:
-                    p1point.setText("Ad");
+                    p1point.setText(getString(R.string.adv));
                     break;
                 default:
-                    p1point.setText("EE");
+                    p1point.setText(getString(R.string.error));
 
             }
             switch (p2){
                 case 0:
-                    p2point.setText("00");
+                    p2point.setText(getString(R.string.zero));
                     break;
                 case 1:
-                    p2point.setText("15");
+                    p2point.setText(getString(R.string.fifteen));
                     break;
                 case 2:
-                    p2point.setText("30");
+                    p2point.setText(getString(R.string.thirty));
                     break;
                 case 3:
-                    p2point.setText("40");
+                    p2point.setText(getString(R.string.fourty));
                     break;
                 case 4:
-                    p2point.setText("Ad");
+                    p2point.setText(getString(R.string.adv));
                     break;
                 default:
-                    p2point.setText("EE");
+                    p2point.setText(getString(R.string.error));
 
             }
 
